@@ -6,13 +6,19 @@
   text-decoration: underline;
 }
 
+#sorting th.sortby[data-sort-direction="asc"]::after {
+  content: "▾";
+}
+#sorting th.sortby[data-sort-direction="desc"]::after {
+  content: "▴";
+}
+
 #list {
   border-collapse: collapse;
 }
 
 #list tbody tr td {
   padding: 4px;
-  
 }
 
 #list tbody tr:nth-child(odd) td {
@@ -21,6 +27,9 @@
 }
 
 #list tbody tr:nth-child(even) td {
-
   border-right: rgb(171, 219, 252) 1px dotted;
+}
+
+td {
+  cursor: pointer;
 }

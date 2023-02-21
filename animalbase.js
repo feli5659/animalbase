@@ -79,6 +79,13 @@ function selectSort(event) {
   const sortBy = event.target.dataset.sort;
   const sortDir = event.target.dataset.sortDirection;
 
+  // find old sortby element and remove .sortby
+  const oldElement = document.querySelector(`[data-sort= '${settings.sortBy}']`);
+  oldElement.classList.remove("sortby");
+
+  // indicate selected sorting direction
+  event.target.classList.add("sortby");
+
   console.log(`User selected ${sortBy} - ${sortDir}`);
   // toggle the direction
 
@@ -87,7 +94,8 @@ function selectSort(event) {
   } else {
     event.target.dataset.sortDirection = "asc";
   }
-
+  
+  //  or write animal.star = !animal.star; - ! indicates the opposite
   setSort(sortBy, sortDir);
 }
 
