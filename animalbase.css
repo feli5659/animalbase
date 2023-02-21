@@ -33,3 +33,10 @@
 td {
   cursor: pointer;
 }
+
+td[data-field="winner"]::after {
+  content: "🏆";
+}
+td[data-field="winner"][data-winner="false"]::after {
+  filter: grayscale(1);
+}
