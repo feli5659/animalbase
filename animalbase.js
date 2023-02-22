@@ -241,6 +241,8 @@ function tryToMakeAWinner(selectedAnimal) {
     document.querySelector("#remove_other").classList.remove("hide");
     document.querySelector("#remove_other .close_btn").addEventListener("click", closeDialog);
     document.querySelector("#remove_other .removeother").addEventListener("click", clickRemoveOther);
+    // print name in dialog box
+    document.querySelector("#remove_other [data-field=winnerOtherWinner]").textContent = others.name;
 
     // if ignore do nothing
 
@@ -265,6 +267,10 @@ function tryToMakeAWinner(selectedAnimal) {
     document.querySelector("#remove_aorb .close_btn").addEventListener("click", closeDialog);
     document.querySelector("#remove_aorb .removea").addEventListener("click", clickRemoveA);
     document.querySelector("#remove_aorb .removeb").addEventListener("click", clickRemoveB);
+
+    // print name in button
+    document.querySelector("#remove_aorb [data-field=winnerA]").textContent = winnerA.name;
+    document.querySelector("#remove_aorb [data-field=winnerB]").textContent = winnerB.name;
     // if ignore - do nothing
     function closeDialog() {
       document.querySelector("#remove_aorb").classList.add("hide");
