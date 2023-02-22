@@ -40,3 +40,29 @@ td[data-field="winner"]::after {
 td[data-field="winner"][data-winner="false"]::after {
   filter: grayscale(1);
 }
+
+/* Dialog box */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialog {
+  box-shadow: 1px 1px 10px #333;
+  border-radius: 12px;
+  padding: 30px;
+  background-color: white;
+  position: relative;
+}
+
+.hide {
+  display: none;
+}
